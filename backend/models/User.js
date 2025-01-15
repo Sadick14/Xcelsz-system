@@ -1,6 +1,5 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
-const Availability = require('./Availability'); // Add this import at the top of your User.js file
 
 const User = sequelize.define('User', {
   id: {
@@ -19,6 +18,5 @@ const User = sequelize.define('User', {
   },
 });
 
-User.hasMany(Availability, { foreignKey: 'userId' });
 
 module.exports = User;
